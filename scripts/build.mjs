@@ -11,7 +11,7 @@ import { join, resolve } from "node:path";
 const ROOT = resolve(new URL("..", import.meta.url).pathname);
 const SRC = join(ROOT, "site");
 const OUT = join(ROOT, "dist");
-export const DEFAULT_URL = "https://nishant-kumar-singh.vercel.app";
+export const DEFAULT_URL = "https://devnishantt.vercel.app";
 
 export function siteUrl(env = process.env) {
   const raw = env.SITE_URL || (env.VERCEL_PROJECT_PRODUCTION_URL && `https://${env.VERCEL_PROJECT_PRODUCTION_URL}`) || DEFAULT_URL;

@@ -46,3 +46,8 @@ test("built pages carry canonical, JSON-LD Person with name variants, and no lef
   assert.match(readFileSync("dist/sitemap.xml", "utf8"), /https:\/\/t\.example\/resume\//);
   assert.match(readFileSync("dist/robots.txt", "utf8"), /Sitemap: https:\/\/t\.example\/sitemap\.xml/);
 });
+
+test("the Google Search Console verification file is published at the site root, byte for byte", () => {
+  execFileSync("node", ["scripts/build.mjs"], { env: { ...process.env, SITE_URL: "https://t.example" }, stdio: "pipe" });
+  assert.equal(readFileSync("dist/googlea39614cd44855b0c.html", "utf8"), "google-site-verification: googlea39614cd44855b0c.html");
+});

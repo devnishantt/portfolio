@@ -23,7 +23,7 @@ h1 span{display:block;background:linear-gradient(180deg,#8d939d,#4a4f57);-webkit
 </style><div class="glow"></div><div class="grid"></div>
 <p class="k"><i></i>Nishant Kumar Singh / backend engineer</p>
 <h1>Try to <b>break</b><span>my backends.</span></h1>
-<p class="f"><em style="font-style:normal"><b>5</b> live labs, all breakable</em><em style="font-style:normal">nishant-kumar-singh.vercel.app</em></p>`;
+<p class="f"><em style="font-style:normal"><b>5</b> live labs, all breakable</em><em style="font-style:normal">devnishantt.vercel.app</em></p>`;
 
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1200, height: 630 } });

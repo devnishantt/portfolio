@@ -16,8 +16,7 @@ an About section, security headers and a build step that fills in the final URL.
 2. The first URL Vercel gives you is used automatically (`VERCEL_PROJECT_PRODUCTION_URL`). To pin it, or to use a
    custom domain, set the environment variable **`SITE_URL`** (for example `https://nishantkumarsingh.dev`) and redeploy.
    Canonical URLs, Open Graph tags, JSON-LD, `sitemap.xml` and `robots.txt` all follow it.
-3. The project name decides the default address. `nishant-kumar-singh` gives `nishant-kumar-singh.vercel.app`, which is
-   what the committed resume QR code and the OG image point to. If you pick another name, run
+3. The live address is `devnishantt.vercel.app`, which is what the committed resume QR code and the OG image point to. If it ever changes, run
    `SITE_URL=https://your-url npm run build` and update the QR in `site/resume/index.html` and the text in `scripts/og.mjs`.
 
 ## SEO checklist (the part that is not code)
