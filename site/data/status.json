@@ -1,7 +1,7 @@
 {
- "generated_at": "2026-10-31T06:13:35Z",
+ "generated_at": "2026-11-13T12:37:53Z",
  "user": "devnishantt",
- "green": 6,
+ "green": 5,
  "total": 6,
  "repos": [
   {
@@ -37,13 +37,13 @@
    "description": "Evidence-driven incident response API: closures need two independent approvals of the current SHA-256 evidence manifest. Fastify, Bun, D1.",
    "language": "TypeScript",
    "stars": 0,
-   "pushed_at": "2026-10-30T18:48:01Z",
+   "pushed_at": "2026-11-12T09:53:08Z",
    "latest": {
     "conclusion": "success",
-    "sha": "de090d4",
-    "at": "2026-10-30T18:48:33Z",
-    "seconds": 26,
-    "url": "https://github.com/devnishantt/aftermark/actions/runs/41109985259",
+    "sha": "2416ab5",
+    "at": "2026-11-12T09:53:42Z",
+    "seconds": 33,
+    "url": "https://github.com/devnishantt/aftermark/actions/runs/43195406049",
     "workflow": "Backend checks"
    },
    "history": [
@@ -54,9 +54,33 @@
      "seconds": 26,
      "url": "https://github.com/devnishantt/aftermark/actions/runs/41109985259",
      "workflow": "Backend checks"
+    },
+    {
+     "conclusion": "failure",
+     "sha": "de090d4",
+     "at": "2026-10-31T08:07:39Z",
+     "seconds": 48,
+     "url": "https://github.com/devnishantt/aftermark/actions/runs/41183257413",
+     "workflow": "npm_and_yarn in /. for glob - Update #1667498105"
+    },
+    {
+     "conclusion": "failure",
+     "sha": "de090d4",
+     "at": "2026-10-31T08:07:43Z",
+     "seconds": 52,
+     "url": "https://github.com/devnishantt/aftermark/actions/runs/41183257461",
+     "workflow": "npm_and_yarn in /. for minimatch - Update #1667498112"
+    },
+    {
+     "conclusion": "success",
+     "sha": "2416ab5",
+     "at": "2026-11-12T09:53:42Z",
+     "seconds": 33,
+     "url": "https://github.com/devnishantt/aftermark/actions/runs/43195406049",
+     "workflow": "Backend checks"
     }
    ],
-   "pass_rate": 1.0
+   "pass_rate": 0.5
   },
   {
    "repo": "Pactrail",
@@ -161,14 +185,14 @@
    "description": "Hospital management REST API: JWT rotation, Redis token blacklist, rate limiting, uploads and email. TypeScript, Express 5, Prisma.",
    "language": "TypeScript",
    "stars": 0,
-   "pushed_at": "2026-10-30T21:36:58Z",
+   "pushed_at": "2026-11-13T08:19:02Z",
    "latest": {
-    "conclusion": "success",
-    "sha": "c8cb96a",
-    "at": "2026-10-30T21:37:38Z",
-    "seconds": 35,
-    "url": "https://github.com/devnishantt/Hospital-Management/actions/runs/41132370798",
-    "workflow": "CI"
+    "conclusion": "failure",
+    "sha": "cff1c72",
+    "at": "2026-11-12T09:42:31Z",
+    "seconds": 46,
+    "url": "https://github.com/devnishantt/Hospital-Management/actions/runs/43193732075",
+    "workflow": "npm_and_yarn in /. for minimatch - Update #1698038063"
    },
    "history": [
     {
@@ -178,9 +202,41 @@
      "seconds": 35,
      "url": "https://github.com/devnishantt/Hospital-Management/actions/runs/41132370798",
      "workflow": "CI"
+    },
+    {
+     "conclusion": "failure",
+     "sha": "c8cb96a",
+     "at": "2026-10-31T07:44:47Z",
+     "seconds": 60,
+     "url": "https://github.com/devnishantt/Hospital-Management/actions/runs/41181741078",
+     "workflow": "npm_and_yarn in /. for minimatch - Update #1667464116"
+    },
+    {
+     "conclusion": "success",
+     "sha": "c8cb96a",
+     "at": "2026-10-31T07:44:49Z",
+     "seconds": 62,
+     "url": "https://github.com/devnishantt/Hospital-Management/actions/runs/41181741079",
+     "workflow": "npm_and_yarn in /. for esbuild - Update #1667464119"
+    },
+    {
+     "conclusion": "success",
+     "sha": "cff1c72",
+     "at": "2026-11-12T09:42:04Z",
+     "seconds": 27,
+     "url": "https://github.com/devnishantt/Hospital-Management/actions/runs/43193711929",
+     "workflow": "CI"
+    },
+    {
+     "conclusion": "failure",
+     "sha": "cff1c72",
+     "at": "2026-11-12T09:42:31Z",
+     "seconds": 46,
+     "url": "https://github.com/devnishantt/Hospital-Management/actions/runs/43193732075",
+     "workflow": "npm_and_yarn in /. for minimatch - Update #1698038063"
     }
    ],
-   "pass_rate": 1.0
+   "pass_rate": 0.6
   }
  ]
 }
