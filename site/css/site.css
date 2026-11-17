@@ -756,7 +756,7 @@ input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius
 .footer-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px 22px; margin: 0; font-size: 13.5px; }
 .footer-links a { color: var(--muted); transition: color 0.18s; }
 .footer-links a:hover { color: var(--text); }
-.footer-note { grid-column: 1 / -1; margin: 0; color: var(--faint); font-size: 12.5px; }
+.footer-note { grid-column: 1 / -1; margin: 0; color: var(--muted); font-size: 12.5px; }
 .footer-note code { font-size: 0.95em; }
 
 /* ---------------------------------------------------------------- toast */
@@ -798,9 +798,9 @@ input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius
 }
 @media (max-width: 640px) {
   .nav { padding: 0 16px; gap: 12px; }
-  .status-pill .label { display: none; }
+  .status-pill .label { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
   .status-pill { padding: 0 10px; }
-  .nav-email span { display: none; }
+  .nav-email span { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
   .nav-email { width: 32px; padding: 0; }
   main > section { padding: 0 16px; }
   main > section + section { margin-top: 110px; }
@@ -915,7 +915,7 @@ input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius
 .resume-text b { display: block; font-size: 15px; font-weight: 600; }
 .resume-text small { display: block; margin-top: 2px; color: var(--muted); font-size: 13px; line-height: 1.45; }
 .resume-actions { display: flex; gap: 8px; flex: none; }
-@media (max-width: 1080px) { .nav-resume span { display: none; } .nav-resume { width: 32px; padding: 0; } }
+@media (max-width: 1080px) { .nav-resume span { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; } .nav-resume { width: 32px; padding: 0; } }
 @media (max-width: 640px) {
   .resume-card { flex-wrap: wrap; }
   .resume-actions { width: 100%; }
