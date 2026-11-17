@@ -2,7 +2,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { siteUrl, sitemap, robots, verificationTags, DEFAULT_URL } from "../scripts/build.mjs";
 
 test("siteUrl prefers SITE_URL, then Vercel's production URL, then the default; trailing slash is stripped", () => {
@@ -50,4 +50,22 @@ test("built pages carry canonical, JSON-LD Person with name variants, and no lef
 test("the Google Search Console verification file is published at the site root, byte for byte", () => {
   execFileSync("node", ["scripts/build.mjs"], { env: { ...process.env, SITE_URL: "https://t.example" }, stdio: "pipe" });
   assert.equal(readFileSync("dist/googlea39614cd44855b0c.html", "utf8"), "google-site-verification: googlea39614cd44855b0c.html");
+});
+
+test("every icon the pages link to is published, and the resume has its own structured data", () => {
+  execFileSync("node", ["scripts/build.mjs"], { env: { ...process.env, SITE_URL: "https://t.example" }, stdio: "pipe" });
+  for (const page of ["dist/index.html", "dist/resume/index.html"]) {
+    const html = readFileSync(page, "utf8");
+    for (const [, href] of html.matchAll(/<link rel="(?:icon|apple-touch-icon|manifest)"[^>]*href="\/([^"]+)"/g)) {
+      assert.ok(existsSync(`dist/${href}`), `${page} links /${href} but it is not in dist/`);
+    }
+    assert.match(html, /rel="apple-touch-icon"/);
+  }
+  const manifest = JSON.parse(readFileSync("dist/manifest.webmanifest", "utf8"));
+  for (const icon of manifest.icons) assert.ok(existsSync(`dist${icon.src}`), `manifest icon ${icon.src} missing`);
+  const resume = readFileSync("dist/resume/index.html", "utf8");
+  const ld = JSON.parse(resume.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
+  const page = ld["@graph"].find((n) => n["@type"] === "ProfilePage");
+  assert.equal(page.url, "https://t.example/resume/");
+  assert.equal(page.mainEntity["@id"], "https://t.example/#person");
 });
