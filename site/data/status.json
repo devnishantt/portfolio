@@ -1,7 +1,7 @@
 {
- "generated_at": "2026-11-19T13:54:14Z",
+ "generated_at": "2026-11-20T13:36:56Z",
  "user": "devnishantt",
- "green": 5,
+ "green": 4,
  "total": 6,
  "repos": [
   {
@@ -168,12 +168,12 @@
    "stars": 0,
    "pushed_at": "2026-10-30T18:38:30Z",
    "latest": {
-    "conclusion": "success",
+    "conclusion": "failure",
     "sha": "9d8f7b3",
-    "at": "2026-10-30T18:39:41Z",
-    "seconds": 63,
-    "url": "https://github.com/devnishantt/bank-management-system/actions/runs/41108657424",
-    "workflow": "CI"
+    "at": "2026-11-20T00:47:18Z",
+    "seconds": 59,
+    "url": "https://github.com/devnishantt/bank-management-system/actions/runs/44648493486",
+    "workflow": "npm_and_yarn in /. for effect - Update #1717673693"
    },
    "history": [
     {
@@ -183,9 +183,17 @@
      "seconds": 63,
      "url": "https://github.com/devnishantt/bank-management-system/actions/runs/41108657424",
      "workflow": "CI"
+    },
+    {
+     "conclusion": "failure",
+     "sha": "9d8f7b3",
+     "at": "2026-11-20T00:47:18Z",
+     "seconds": 59,
+     "url": "https://github.com/devnishantt/bank-management-system/actions/runs/44648493486",
+     "workflow": "npm_and_yarn in /. for effect - Update #1717673693"
     }
    ],
-   "pass_rate": 1.0
+   "pass_rate": 0.5
   },
   {
    "repo": "Hospital-Management",
